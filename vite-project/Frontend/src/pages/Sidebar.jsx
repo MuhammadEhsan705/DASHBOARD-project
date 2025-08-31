@@ -11,7 +11,7 @@ function Sidebar({ collapsed, isOpen }) {
       className={`fixed top-[70px] left-0 h-[calc(100vh-70px)] 
         bg-white dark:bg-zinc-900 shadow-md transition-all duration-400 
         ${collapsed ? 'w-[5%]' : 'w-[70%] md:w-[20%]'}
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}  z-20 md:translate-x-0`}
     >
       <ul className="pt-4 text-black dark:text-white">
         <li className="p-4">
