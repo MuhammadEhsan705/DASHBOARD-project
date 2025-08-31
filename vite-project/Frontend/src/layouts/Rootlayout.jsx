@@ -92,7 +92,7 @@ function Rootlayout({ collapsed }) {
               )}
             </div>
 
-            <Link><FaGithub className='h-7 w-7' /></Link>
+            <Link to="https://github.com/MuhammadEhsan705/DASHBOARD-project"><FaGithub className='h-7 w-7' /></Link>
           </div>
         </div>
       </nav>
