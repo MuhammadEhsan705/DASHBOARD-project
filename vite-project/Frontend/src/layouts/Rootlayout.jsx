@@ -100,8 +100,8 @@ function Rootlayout({ collapsed }) {
       {user && <Sidebar collapsed={isSidebarCollapsed} isOpen={isOpen} />}
 
       <div
-        className={`pt-[80px] px-6 transition-all duration-300 
-        ${isSidebarCollapsed ? 'ml-[5%]' : 'ml-[20%]'}`}
+       className={`pt-[80px] px-6 transition-all duration-300 
+        ${isSidebarCollapsed ? 'md:ml-[60px]' : 'md:ml-[20%]'} ml-0`}
       >
         <Outlet context={{ collapsed: isSidebarCollapsed }} />
       </div>

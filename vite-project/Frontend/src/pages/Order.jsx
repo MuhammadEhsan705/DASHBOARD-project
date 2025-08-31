@@ -41,7 +41,7 @@ function Order() {
     setSelectAll(!selectAll);
   };
 
-  // ✅ Handle Single Row Select
+ 
   const handleSelectRow = (id) => {
     if (selected.includes(id)) {
       setSelected(selected.filter((sid) => sid !== id));
@@ -50,7 +50,7 @@ function Order() {
     }
   };
 
-  // ✅ Handle Delete Selected
+  
   const handleDeleteSelected = async () => {
     if (selected.length === 0) return;
     const { error } = await supabase.from("orders").delete().in("id", selected);
@@ -66,7 +66,7 @@ function Order() {
     }
   };
 
-  // ✅ Search Filter
+ 
   const filtered = orders.filter((item) =>
     item.item?.toLowerCase().includes(query.toLowerCase()) ||
     item.customer?.toLowerCase().includes(query.toLowerCase())
@@ -97,7 +97,7 @@ function Order() {
               <input
                 className="bg-transparent border-0 outline-none flex-1 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-300"
                 type="text"
-                placeholder="Search Customer"
+                placeholder=" Customer"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
@@ -107,7 +107,7 @@ function Order() {
           </div>
         </div>
 
-        {/* Delete Button */}
+     
         <div className="flex justify-end pr-14">
           <button onClick={handleDeleteSelected}>
             <MdDelete className="w-5 h-5" />

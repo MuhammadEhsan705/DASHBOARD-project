@@ -7,17 +7,17 @@ function Products() {
   return (
     <>
       {/* -----------heading---------- */}
-      <div>
+      <div className='flex justify-center items-center'>
         <div className="flex justify-between p-7">
           <h1 className="font-bold text-5xl text-black dark:text-white">Product</h1>
 
         </div>
 
-        <div className="products"></div>
+       
       </div>
 
-      {/* -----------product grid---------- */}
-      <div className="grid md:grid-cols-3 gap-4">
+     
+      <div className=" justify-center grid md:grid-cols-3 gap-4">
         {product.map((product) => (
           <Product key={product.id} {...product} />
         ))}

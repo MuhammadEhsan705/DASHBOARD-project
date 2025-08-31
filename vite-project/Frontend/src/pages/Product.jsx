@@ -3,7 +3,7 @@ import React from 'react';
 function Product({ id, image, name, price }) {
   return (
     <>
-      <div className="rounded-2xl shadow-md p-4 w-60 text-center hover:shadow-lg transition bg-white dark:bg-zinc-900 dark:border dark:border-zinc-700">
+      <div className=" rounded-2xl shadow-md p-4 w-60 text-center hover:shadow-lg transition bg-white dark:bg-zinc-900 dark:border dark:border-zinc-700">
         <img
           src={image}
           alt={name}
