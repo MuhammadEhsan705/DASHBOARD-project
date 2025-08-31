@@ -97,7 +97,7 @@ function Order() {
               <input
                 className="bg-transparent border-0 outline-none flex-1 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-300"
                 type="text"
-                placeholder="Search Customer..."
+                placeholder="Search Customer"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
