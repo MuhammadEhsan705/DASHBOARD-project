@@ -41,7 +41,7 @@ function Order() {
     setSelectAll(!selectAll);
   };
 
- 
+
   const handleSelectRow = (id) => {
     if (selected.includes(id)) {
       setSelected(selected.filter((sid) => sid !== id));
@@ -50,7 +50,7 @@ function Order() {
     }
   };
 
-  
+
   const handleDeleteSelected = async () => {
     if (selected.length === 0) return;
     const { error } = await supabase.from("orders").delete().in("id", selected);
@@ -66,7 +66,7 @@ function Order() {
     }
   };
 
- 
+
   const filtered = orders.filter((item) =>
     item.item?.toLowerCase().includes(query.toLowerCase()) ||
     item.customer?.toLowerCase().includes(query.toLowerCase())
@@ -107,7 +107,7 @@ function Order() {
           </div>
         </div>
 
-     
+
         <div className="flex justify-end pr-14">
           <button onClick={handleDeleteSelected}>
             <MdDelete className="w-5 h-5" />
@@ -164,17 +164,18 @@ function Order() {
                         )}
                       </td>
                       <td className="px-4 py-3">
-                        {order.status === "Packing" && (
+                        {order.status?.toLowerCase().includes("packing") && (
                           <span className="px-3 py-1 text-xs rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300">
                             Packing
                           </span>
                         )}
-                        {order.status === "Shipping" && (
+                        {order.status?.toLowerCase().includes("shipping") && (
                           <span className="px-3 py-1 text-xs rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">
                             Shipping
                           </span>
                         )}
-                        {order.status === "Delivered" && (
+
+                        {order.status?.toLowerCase().includes("delivered") && (
                           <span className="px-3 py-1 text-xs rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300">
                             Delivered
                           </span>
