@@ -135,7 +135,7 @@ function Customer() {
             <tbody>
               {filtered.map((Customers, index) => (
                 <tr key={index} className="hover:bg-gray-50 dark:hover:bg-zinc-700">
-                  <td class="px-4 py-3"><input checked={selected.includes(Customers.id)}
+                  <td className="px-4 py-3"><input checked={selected.includes(Customers.id)}
                     onChange={() => handleSelectRow(Customers.id)} type="checkbox" className="w-4 h-4" />
                   </td>
                   <td className="px-4  py-3"> {Customers.name}</td>
